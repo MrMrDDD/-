@@ -1,0 +1,35 @@
+1.View dispatchTouchEvent(MotionEvent event)
+    从此处进入可以看到分发的事件处理
+    if (onFilterTouchEventForSecurity(event)) {
+            if ((mViewFlags & ENABLED_MASK) == ENABLED && handleScrollBarDragging(event)) {
+                result = true;
+            }
+            //noinspection SimplifiableIfStatement
+			监听事件的信息，有触摸事件的话事件将被消耗
+            ListenerInfo li = mListenerInfo;
+            if (li != null && li.mOnTouchListener != null
+                    && (mViewFlags & ENABLED_MASK) == ENABLED
+                    && li.mOnTouchListener.onTouch(this, event)) {
+                result = true;
+            }
+			判断result的值，查看是否为true，如果为true的话，将进不去
+			下面对onTouchEvent的分析，如果onTouchEvent里面的事件有处理就会返回true
+			事件被消耗
+            if (!result && onTouchEvent(event)) {
+                result = true;
+            }
+        }
+
+        if (!result && mInputEventConsistencyVerifier != null) {
+            mInputEventConsistencyVerifier.onUnhandledEvent(event, 0);
+        }
+
+        // Clean up after nested scrolls if this is the end of a gesture;
+        // also cancel it if we tried an ACTION_DOWN but we didn't want the rest
+        // of the gesture.
+        if (actionMasked == MotionEvent.ACTION_UP ||
+                actionMasked == MotionEvent.ACTION_CANCEL ||
+                (actionMasked == MotionEvent.ACTION_DOWN && !result)) {
+            stopNestedScroll();
+        }
+		
