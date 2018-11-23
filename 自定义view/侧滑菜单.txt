@@ -1,0 +1,54 @@
+分析：
+视图部分分析：
+	1.两个部分，一个属于默认显示的部分，一个属于侧滑时的部分 
+	2.一个滑动器
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        switch (ev.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                startX = ev.getX();
+                startY = ev.getY();
+                super.dispatchTouchEvent(ev);
+                return true;
+//                break;
+            case MotionEvent.ACTION_MOVE:
+                dx = ev.getX() - startX;
+                dy = ev.getY() - startY;
+                if (Math.abs(dx) - Math.abs(dy) > ViewConfiguration.getTouchSlop()) {
+                    if(getScrollX() + (-dx)>rightview.getWidth()||getScrollX() + (-dx)<0){
+                        return true;
+                    }
+                    this.scrollBy((int) -dx, 0);
+                    startX = ev.getX();
+                    startY = ev.getY();
+                    return true;
+                }
+                break;
+            case MotionEvent.ACTION_UP:
+                //仅仅只是把滑动的情况和参数描述和记录。
+                //判断当前松开手是往左滑还是往右滑
+                int offset = (getScrollX() / (float) rightview.getWidth()) > 0.5f ? rightview.getWidth() - getScrollX() : -getScrollX();
+                mScroller.startScroll(getScrollX(), getScrollY(), offset, 0);
+                invalidate();
+                startX = 0;
+                startY = 0;
+                dx = 0;
+                dy = 0;
+
+                break;
+        }
+
+
+        return super.dispatchTouchEvent(ev);
+    }
+
+	
+	
+    @Override
+    public void computeScroll() {
+//        super.computeScroll();
+        if (mScroller.computeScrollOffset()) {
+            this.scrollTo(mScroller.getCurrX(), mScroller.getCurrY());
+            postInvalidate();
+        }
+    }
