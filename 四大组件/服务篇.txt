@@ -1,0 +1,43 @@
+服务是一个可以长时间在后台执行的组件
+
+服务的开启方法有两种方式；
+1.startService();
+2.bindService();
+************************************
+startService启动。
+
+生命周期
+onCreate() -> onStartCommand() -> onDestroy()
+服务不存在的时候执行
+onCreate
+服务存在时启动的话就会执行
+onStartCommand
+
+绑定开启的服务
+绑定的服务只会在为其他组件提供服务时处于活动状态
+，并不会无限期在后台运行。
+
+服务端：
+1.Service中要实现 IBind(),需要自定义自已的Binder
+客户端
+2.需要继承ServiceConnection，其中的IBinder就是返回的Binder
+3.开启方式
+bindService(intent,new MyConnection(),BIND_AUTO_CREATE);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

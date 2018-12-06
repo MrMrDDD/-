@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".chenjinshi.Main2Activity">
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_background"
+        android:transitionName="bt"
+        android:visibility="gone" />
+
+    <com.example.cn.application.View.SlidingView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#f00"
+            android:text="从小习武，练就一身本领，我是三多" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="#0f0"
+            android:text="删除" />
+    </com.example.cn.application.View.SlidingView>
+
+
+    <com.example.cn.application.View.PaintView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

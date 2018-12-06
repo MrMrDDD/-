@@ -1,0 +1,15 @@
+﻿数据库篇：
+继承SQLiteOpenHelper
+创建数据库
+创建数据表
+    // 表名                    table
+    // 查询字段	  columns
+    // 查询条件              selection 要包含 ？
+    // 满足查询的值        selecttionsARGs
+    // 分组                    groupby
+    // 分组筛选关键字    having
+    // 排序                    orderby
+
+
+内容提供者是连接一个进程数据与另一个进程中的通信
+例如：联系人，日历，多媒体等等。
