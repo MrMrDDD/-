@@ -1,5 +1,6 @@
 package com.example.cn.application;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -7,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.ViewGroup;
 
-public class MainActivity extends AppCompatActivity implements DragCallback {
+public class MainActivity extends Activity implements DragCallback {
     RecyclerView rec;
     ItemTouchHelper itemTouchHelper;
 

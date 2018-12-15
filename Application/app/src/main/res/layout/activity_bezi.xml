@@ -5,9 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BeziActivity">
-    <com.example.cn.application.View.WaveView
-        android:id="@+id/bz"
+    <!--<com.example.cn.application.View.WaveView-->
+        <!--android:id="@+id/bz"-->
+
+
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+    <com.example.cn.application.View.ViewDemo2
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="safasfafaff"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="safasfafaff"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="safasfafaff"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="safasfafaff"
+            />
+    </com.example.cn.application.View.ViewDemo2>
 
 </android.support.constraint.ConstraintLayout>

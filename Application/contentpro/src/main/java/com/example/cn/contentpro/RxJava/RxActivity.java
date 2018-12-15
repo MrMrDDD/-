@@ -3,6 +3,7 @@ package com.example.cn.contentpro.RxJava;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import ModelViewPresenter.BaseActivity;
@@ -14,7 +15,10 @@ public class RxActivity extends BaseActivity<IRxView, RxPresenter<IRxView>> impl
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         presenter.fetchText();
+        ImageView view = new ImageView(this);
+        view.setOnClickListener(v->{
 
+        });
     }
 
     @Override

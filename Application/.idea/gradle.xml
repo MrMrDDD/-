@@ -9,7 +9,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/bt" />
             <option value="$PROJECT_DIR$/contentpro" />
+            <option value="$PROJECT_DIR$/lib-dds-1.0.14.1-release" />
+            <option value="$PROJECT_DIR$/nativedemo" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

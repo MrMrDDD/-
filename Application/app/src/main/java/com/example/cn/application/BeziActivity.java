@@ -14,8 +14,9 @@ public class BeziActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        MyGradientView gradientView=new MyGradientView(this);
-        setContentView(new ProgressView(this));
+        setContentView(R.layout.activity_bezi);
+//        MyGradientView gradientView=new MyGradientView(this);
+//        setContentView(new ProgressView(this));
 //        setContentView(R.layout.activity_bezi);
 //        bz=findViewById(R.id.bz);
 //        bz.setOnClickListener(new View.OnClickListener() {

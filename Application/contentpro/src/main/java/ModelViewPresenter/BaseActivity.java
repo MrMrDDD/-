@@ -14,6 +14,10 @@ public abstract class BaseActivity<V,T extends Basepresenter<V> > extends AppCom
         presenter.attachView((V) this);
     }
 
+    /**
+     * 创建P层
+     * @return
+     */
     protected abstract T createpresenter();
 
     @Override

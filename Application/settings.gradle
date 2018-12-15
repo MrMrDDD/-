@@ -1,1 +1,1 @@
-include ':app', ':contentpro'
+include ':app', ':contentpro', ':bt', ':nativedemo', ':lib-dds-1.0.14.1-release'
