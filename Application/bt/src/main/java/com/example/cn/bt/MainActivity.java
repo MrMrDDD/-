@@ -14,12 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.aispeech.ailog.AILog;
-import com.aispeech.dui.dds.DDS;
-import com.aispeech.dui.dds.DDSAuthListener;
-import com.aispeech.dui.dds.DDSConfig;
-import com.aispeech.dui.dds.DDSInitListener;
-import com.aispeech.dui.dds.auth.AuthType;
+
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -48,33 +43,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void startDDS() {
-        DDS.getInstance().init(getApplicationContext(),
-                new DDSConfig()
-                        .addConfig(DDSConfig.K_PRODUCT_ID, "278576010")
-                        .addConfig(DDSConfig.K_USER_ID, "")
-                        .addConfig(DDSConfig.K_ALIAS_KEY, "test")
-                        .addConfig(DDSConfig.K_AUTH_TYPE, AuthType.PROFILE)
-                        .addConfig(DDSConfig.K_API_KEY,"5d2520d50b2beb650446b0b85c138ed4"),
-                new DDSInitListener() {
-                    @Override
-                    public void onInitComplete(boolean isFull) {
-                        AILog.d(TAG, "onInitComplete: " + isFull);
-                    }
 
-                    @Override
-                    public void onError(int what, String msg) {
-                        AILog.d(TAG, "onError: " + what + ", error: " + msg);
-                    }
-                }, new DDSAuthListener() {
-                    @Override
-                    public void onAuthSuccess() {
-                        AILog.d(TAG, "onAuthSuccess");
-                    }
-
-                    @Override
-                    public void onAuthFailed(String errId, String error) {
-                        AILog.d(TAG, "onAuthFailed: " + errId + ", error:" + error);
-                    }
-                });
     }
 }

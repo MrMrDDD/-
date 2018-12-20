@@ -25,11 +25,13 @@
             <!-- </intent-filter> -->
         </activity>
         <activity android:name=".chenjinshi.Main2Activity">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".chenjinshi.Main3Activity" />
 
@@ -64,6 +66,13 @@
             android:exported="true" />
 
         <activity android:name=".BeziActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name=".chenjinshi.Main4Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
